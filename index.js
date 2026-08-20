@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 
 import propertyRoutes from './routes/propertyRoutes.js';
 import leadRoutes from './routes/leadRoutes.js';
+import contactRoutes from './routes/contactRoutes.js';
 
 dotenv.config();
 
@@ -15,6 +16,7 @@ app.use(express.json());
 
 app.use('/api/properties', propertyRoutes);
 app.use('/api/leads', leadRoutes);
+app.use('/api/contact', contactRoutes);
 
 app.get('/', (req, res) => {
   res.json({ status: 'online', message: 'FK&CO Estate API Server Operational' });
