@@ -22,6 +22,10 @@ app.get('/', (req, res) => {
   res.json({ status: 'online', message: 'FK&CO Estate API Server Operational' });
 });
 
-app.listen(PORT, () => {
-  console.log(`Server executing on http://localhost:${PORT}`);
-});
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`Server executing on http://localhost:${PORT}`);
+  });
+}
+
+export default app;
