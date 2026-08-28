@@ -18,7 +18,7 @@ export const submitContactForm = async (req, res) => {
 
     const mailOptions = {
       from: `"FK&CO Website" <${process.env.EMAIL_USER}>`,
-      to: process.env.ADMIN_EMAIL,
+      to: process.env.EMAIL_USER,
       replyTo: email,
       subject: `New Enquiry: ${enquiryType} - ${fullName}`,
       html: `

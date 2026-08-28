@@ -46,7 +46,7 @@ export const createLead = async (req, res) => {
     if (lead_type === 'valuation') {
       const mailOptions = {
         from: `"FK&CO Website" <${process.env.EMAIL_USER}>`,
-        to: process.env.ADMIN_EMAIL,
+        to: process.env.EMAIL_USER,
         replyTo: email,
         subject: `New Valuation Request: ${intent.toUpperCase()} - ${full_name}`,
         html: `
