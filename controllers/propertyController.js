@@ -1,5 +1,5 @@
 import supabase from '../config/supabaseClient.js';
-// hello
+
 export const getAllProperties = async (req, res) => {
   try {
     const { type, status, city } = req.query;
